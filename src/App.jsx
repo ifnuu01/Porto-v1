@@ -1,10 +1,16 @@
 import "./App.css";
-import Home from "./layouts/home";
+import About from "./components/About";
+import Home from "./Components/home";
+import Navbar from "./components/navbar";
+import Project from "./components/Project";
 
 function App() {
   return (
-    <div className="bg-ifnu h-[1000px]">
+    <div className="bg-ifnu">
+      <Navbar />
       <Home />
+      <Project />
+      <About />
     </div>
   );
 }
