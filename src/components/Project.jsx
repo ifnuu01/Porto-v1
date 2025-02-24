@@ -6,45 +6,24 @@ export default function Project() {
   const projects = [
     {
       id: 1,
-      title: "Project 1",
-      tech: "React",
-      image: "path/to/image1.jpg",
-      desc: "This is a short description of Project 1.",
+      title: "Tomato Detection",
+      tech: ["Python", "Tensorflow"],
+      image: "tomato-detection.png",
+      desc: "A website that detects the ripeness of tomatoes with classifications of ripe tomatoes, semi-ripe tomatoes and unripe tomatoes.",
     },
     {
       id: 2,
-      title: "Project 2",
-      tech: "Vue",
-      image: "path/to/image2.jpg",
-      desc: "This is a short description of Project 2.",
+      title: "Issue Sedunia",
+      tech: ["PHP", "HTML", "CSS", "JS"],
+      image: "issue-sedunia.png",
+      desc: "A social media website built to solve issues related to programs and other things.",
     },
     {
       id: 3,
-      title: "Project 3",
-      tech: "Angular",
-      image: "path/to/image3.jpg",
-      desc: "This is a short description of Project 3.",
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      tech: "Svelte",
-      image: "path/to/image4.jpg",
-      desc: "This is a short description of Project 4.",
-    },
-    {
-      id: 5,
-      title: "Project 5",
-      tech: "Next.js",
-      image: "path/to/image5.jpg",
-      desc: "This is a short description of Project 5.",
-    },
-    {
-      id: 6,
-      title: "Project 6",
-      tech: "Nuxt.js",
-      image: "path/to/image6.jpg",
-      desc: "This is a short description of Project 6.",
+      title: "Pet Heaven",
+      tech: ["PHP", "HTML", "CSS", "JS"],
+      image: "pet-heaven.png",
+      desc: "An e-commerce website aimed at selling pets (this is just a side project for fun)",
     },
   ];
   return (
@@ -90,17 +69,27 @@ export default function Project() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
             viewport={{ amount: 0.3 }}
-            className="bg-white rounded-lg shadow-md p-4"
+            whileHover={{ opacity: 0.8 }}
+            className="bg-white rounded-lg shadow-md"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-32 object-cover rounded-t-lg"
+              className="w-full h-45 object-cover rounded-t-lg"
             />
             <div className="p-4">
               <h2 className="text-xl font-bold">{project.title}</h2>
-              <p className="text-gray-600">Built with {project.tech}</p>
-              <p className="text-gray-800">{project.desc}</p>
+              <div className="flex items-center mt-2">
+                {project.tech.map((tech) => (
+                  <span
+                    key={tech}
+                    className="bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded-full mr-1"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className="text-gray-800 mt-2">{project.desc}</p>
             </div>
           </motion.div>
         ))}

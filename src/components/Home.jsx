@@ -63,7 +63,7 @@ export default function Home() {
               strings: ["Junior Web Developer", "Network Engineer"],
               autoStart: true,
               loop: true,
-              delay: 75,
+              delay: 80,
             }}
           />
         </motion.h1>

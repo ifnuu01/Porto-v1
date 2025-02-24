@@ -29,11 +29,11 @@ export default function Tools() {
     },
     {
       id: 7,
-      name: "Networking",
+      name: "NodeJS",
     },
     {
       id: 8,
-      name: "Mikrotik",
+      name: "Laravel",
     },
     {
       id: 9,
@@ -45,11 +45,7 @@ export default function Tools() {
     },
     {
       id: 11,
-      name: "Laravel",
-    },
-    {
-      id: 12,
-      name: "NodeJs",
+      name: "MikroTIK",
     },
   ];
   return (
