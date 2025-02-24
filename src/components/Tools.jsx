@@ -49,7 +49,7 @@ export default function Tools() {
     },
   ];
   return (
-    <div className="mt-4 w-96 lg:w-1/2">
+    <div className="mt-4 w-80 lg:w-1/2">
       <h1 className="text-white font-bold text-2xl mt-4 font-[Roboto] text-center">
         ⚒️ Language & Tools ⚒️
       </h1>
