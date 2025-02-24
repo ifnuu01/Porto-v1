@@ -1,7 +1,5 @@
 import React from "react";
-import EarthSVG from "../assets/img/earth.svg";
 import profile from "../assets/img/ifnu.jpg";
-import Marquee from "react-fast-marquee";
 import Tools from "./Tools";
 import { motion } from "framer-motion";
 
@@ -54,14 +52,6 @@ export default function About() {
         <Tools />
       </motion.div>
       {/* Earth */}
-      <motion.img
-        src={EarthSVG}
-        alt="Earth SVG"
-        className="absolute w-1/2 top-10 right-0 lg:w-1/3 lg:right-250 lg:top-20 spin-slow"
-        initial={{ opacity: 0, rotate: -20 }}
-        whileInView={{ opacity: 1, rotate: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      />
     </motion.div>
   );
 }
